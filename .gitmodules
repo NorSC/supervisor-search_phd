@@ -1,0 +1,4 @@
+[submodule "projectsearch_supervisor_data"]
+	path = supervisor_data
+	url = https://github.com/not-dalia/supervisor-search.git
+	branch = main
