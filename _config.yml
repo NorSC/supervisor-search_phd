@@ -42,7 +42,7 @@ defaults:
       layout: "supervisor"
 
 s_module: "phd"
-primary_color: "#8884FF"
+primary_color: "#7e57c2"
 # Build settings
 # theme: minima
 plugins:
