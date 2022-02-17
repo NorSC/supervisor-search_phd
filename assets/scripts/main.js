@@ -29,7 +29,7 @@ search.addIndex('research_theme');
 search.addIndex('research_group');
 search.addIndex('additional_keywords');
 search.addIndex('technologies_languages');
-search.addIndex('additional_details');
+search.addIndex('additional_details_phd');
 for (var key in window.store) {
   // console.log(key)
   search.addDocument({
@@ -39,7 +39,7 @@ for (var key in window.store) {
     'research_group': window.store[key].research_group,
     'additional_keywords': window.store[key].additional_keywords,
     'technologies_languages': window.store[key].technologies_languages,
-    'additional_details': window.store[key].additional_details
+    'additional_details_phd': window.store[key].additional_details_phd
   });
 }
 
@@ -109,7 +109,7 @@ function searchQuery(query) {
       this.field('research_theme');
       this.field('additional_keywords');
       this.field('technologies_languages');
-      this.field('additional_details');
+      this.field('additional_details_phd');
 
       for (var key in window.store) { // Add the data to lunr
         this.add({
@@ -118,7 +118,7 @@ function searchQuery(query) {
           'research_theme': window.store[key].research_theme,
           'additional_keywords': window.store[key].additional_keywords,
           'technologies_languages': window.store[key].technologies_languages,
-          'additional_details': window.store[key].additional_details
+          'additional_details_phd': window.store[key].additional_details_phd
         });
       }
     });

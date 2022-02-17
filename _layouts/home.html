@@ -18,7 +18,7 @@ layout: default
               <div class="research-group" data-tag-value="{{supervisor.research_group | slugify}}">{{supervisor.research_group}}</div>
             </div>
             <div class="excerpt">
-              <!-- {{ supervisor.additional_details | strip_html | strip_newlines | xml_escape }} -->
+              <!-- {{ supervisor.additional_details_phd | strip_html | strip_newlines | xml_escape }} -->
             </div>
             <div class="tags">
               {% for tag in supervisor.research_themes %}
@@ -390,7 +390,7 @@ layout: default
           }
         }
 
-        let additionalDetails = supervisor.additional_details;
+        let additionalDetails = supervisor.additional_details_phd;
 
         if (!excerptShow && additionalDetails && additionalDetails.length > 0) {
           let regex = new RegExp('\\b' + token, 'gi')
@@ -452,7 +452,7 @@ layout: default
     })
 
     let detailsContainer = supervisorContainer.querySelector('.additional-details');
-    detailsContainer.innerHTML = supervisor.data.additional_details;
+    detailsContainer.innerHTML = supervisor.data.additional_details_phd;
 
     let officeHoursContainer = supervisorContainer.querySelector('.office-hours');
     if (supervisor.data.office_hours) {
